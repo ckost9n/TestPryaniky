@@ -2,7 +2,7 @@
 //  UILabel + Extension.swift
 //  WorkOutTestApp
 //
-//  Created by Konstantin on 20.01.2022.
+//  Created by Konstantin on 22.06.2022.
 //
 
 import UIKit
@@ -12,11 +12,9 @@ extension UILabel {
     convenience init(text: String = "") {
         self.init()
         
+        self.textAlignment = .center
         self.text = text
-        self.font = .robotoMedium14()
-        self.textColor = .specialLightBrown
         self.translatesAutoresizingMaskIntoConstraints = false
-        
     }
     
 }

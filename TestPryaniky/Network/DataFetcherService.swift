@@ -7,19 +7,9 @@
 
 import Foundation
 
-//enum Categories: String, CaseIterable {
-//    case trendingAllDay = "All Trend in day"
-//    case trendingAllWeek = "All Trend in week"
-//    case trendingMovieDay = "Trend Movie in day"
-//    case trendingMovieWeek = "Trend Movie in week"
-//    case continueMovie = "Continue watching movies"
-//}
-
 class DataFetcherService {
     
-    private let rocketsURL = "https://api.spacexdata.com/v4/rockets"
-    
-//    private let key = "?api_key=3180eef08dadb9ca352d50241ce95409"
+    private let url = "https://pryaniky.com/static/json/sample.json"
     
     var dataFetcher: DataFetcher!
     
@@ -27,8 +17,8 @@ class DataFetcherService {
         self.dataFetcher = dataFetcher
     }
     
-    func fetchData(completion: @escaping ([RocketSpaceX]?) -> Void) {
-        dataFetcher.fetchGnericJSONData(urlString: rocketsURL, response: completion)
+    func fetchData(completion: @escaping (Model?) -> Void) {
+        dataFetcher.fetchGnericJSONData(urlString: url, response: completion)
     }
     
 }

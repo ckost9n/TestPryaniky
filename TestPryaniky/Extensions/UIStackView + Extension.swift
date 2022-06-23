@@ -2,7 +2,7 @@
 //  UIStackView + Extension.swift
 //  WorkOutTestApp
 //
-//  Created by Konstantin on 14.01.2022.
+//  Created by Konstantin on 22.06.2022.
 //
 
 import UIKit
