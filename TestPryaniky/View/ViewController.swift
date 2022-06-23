@@ -33,28 +33,18 @@ class ViewController: UIViewController {
     
     private var pryanikyStackView = UIStackView()
     
-
-    private var viewModel: ViewViewModelType! {
-        didSet {
-            
-            
-            
-            
-            
-        }
-    }
+    private var viewModel: ViewViewModelType!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = ViewModel()
         setupViews()
         setConstraints()
+        
         viewModel?.loadData { [weak self] in
             guard let self = self else { return }
             DispatchQueue.main.async {
-                
                 self.createElements()
-                
-
             }
         }
     }
@@ -99,8 +89,7 @@ class ViewController: UIViewController {
     private func setupViews() {
         view.backgroundColor = .white
         setStackView()
-        view.addSubview(pryanikyStackView)
-        
+        view.addSubview(pryanikyStackView)        
     }
     
     func setStackView() {
